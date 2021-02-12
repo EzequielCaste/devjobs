@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { JobDetails } from './JobDetails';
 import { JobListItem } from './JobListItem';
 
 export const JobListContainer = ({jobs}) => {
@@ -17,7 +18,12 @@ export const JobListContainer = ({jobs}) => {
         {jobListComponents}
       </ul>
       <section className="showcase">
-        // show job details here
+        {
+          // show job details here 
+        }
+        {
+          currentJob && <JobDetails job={currentJob} />
+        }
       </section>
     </div>
   )

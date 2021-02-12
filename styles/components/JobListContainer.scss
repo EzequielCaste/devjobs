@@ -1,11 +1,16 @@
 .JobListContainer {
-  width: 80vw;
+  width: 95vw;
+  height: 700px;
   border: 1px solid $primary;
   padding: 26px;
   border-radius: 6px;
   margin: 16px 0;
+  display: flex;
+  justify-content: space-evenly;
   ul {
-    width: 500px;
+    height: auto;
+    overflow: auto;
+    width: 50%;
     list-style: none;
   }
   li {
@@ -37,6 +42,24 @@
     &:hover,
     &:focus {
       box-shadow: 0px 2px 3px 0px rgba(33, 33, 33, 0.5);
+    }
+  }
+  .showcase {
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    margin-left: 16px;
+    p {
+      padding: 8px;
+    }
+    ul {
+      width: auto;
+    }
+    li {
+      background-color: initial;
+      border: none;
+      box-shadow: unset;
+      padding: unset;
     }
   }
 }

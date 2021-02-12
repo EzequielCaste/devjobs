@@ -1,0 +1,65 @@
+.JobListContainer {
+  width: 95vw;
+  height: 700px;
+  border: 1px solid $primary;
+  padding: 26px;
+  border-radius: 6px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-evenly;
+  ul {
+    height: auto;
+    overflow: auto;
+    width: 50%;
+    list-style: none;
+  }
+  li {
+    background-color: white;
+    border: 1px solid $primary;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    margin-bottom: 8px;
+    div:nth-of-type(1) {
+      display: flex;
+      flex-direction: column;
+      .company-name {
+        font-size: 12px;
+        color: $text-gray;
+      }
+      .job-title {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    box-shadow: 0px 2px 3px 0px rgba(33, 33, 33, 0.2);
+    img {
+      max-height: 36px;
+      max-width: 120px;
+      margin-right: 8px;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: 0px 2px 3px 0px rgba(33, 33, 33, 0.5);
+    }
+  }
+  .showcase {
+    width: 50%;
+    height: auto;
+    overflow: auto;
+    margin-left: 16px;
+    p {
+      padding: 8px;
+    }
+    ul {
+      width: auto;
+    }
+    li {
+      background-color: initial;
+      border: none;
+      box-shadow: unset;
+      padding: unset;
+    }
+  }
+}

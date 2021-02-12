@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { JobSearchInput } from '../components/JobSearchInput'
 import { Navbar } from '../components/Navbar'
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
       <Navbar />
 
 
-      <main >      
+      <main >   
+
+      <JobSearchInput />   
 
       </main>
 

@@ -12,3 +12,9 @@ body {
   display: grid;
   place-items: center;
 }
+main {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

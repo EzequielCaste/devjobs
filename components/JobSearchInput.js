@@ -1,19 +1,24 @@
-import React, { useState } from 'react'
-import { Button } from './Button'
+import React, { useState } from 'react';
 
-export const JobSearchInput = () => {
+export const JobSearchInput = ({ handleClick }) => {
   const [inputValue, setInputValue] = useState('');
 
   return (
     <div className="JobSearchInput">
-    <label htmlFor="job-search">Job Description</label>
-      <input 
-        type="text" 
+      <label htmlFor="job-search">Job Description</label>
+      <input
+        type="text"
         placeholder="Search by tags, title, expertise, companies"
-        value={inputValue}  
-        onChange={ (e) => setInputValue(e.target.value)}
-        />
-      <Button innerText="Search" />
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <button
+        disabled={!inputValue}
+        onClick={() => handleClick(inputValue)}
+        className="SearchBtn"
+      >
+        Search
+      </button>
     </div>
-  )
-}
+  );
+};

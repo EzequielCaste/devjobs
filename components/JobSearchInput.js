@@ -4,7 +4,7 @@ import styles from '../styles/components/JobSearchInput.module.scss';
 export const JobSearchInput = ({ handleClick }) => {
   const [inputValue, setInputValue] = useState('');
   return (
-    <div className={styles.JobSearchInput}>
+    <div className={styles['job-search-input']}>
       <label htmlFor="job-search">Job Description</label>
       <input
         type="text"
@@ -15,7 +15,7 @@ export const JobSearchInput = ({ handleClick }) => {
       <button
         disabled={!inputValue}
         onClick={() => handleClick(inputValue)}
-        className={styles.SearchBtn}
+        className={styles['job-search-input__search-btn']}
       >
         Search
       </button>

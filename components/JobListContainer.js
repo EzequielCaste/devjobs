@@ -15,9 +15,9 @@ export const JobListContainer = ({ jobs }) => {
   ));
 
   return (
-    <div className="JobListContainer">
+    <div className="job-list-container">
       <ul>{jobListComponents}</ul>
-      <section className="showcase">
+      <section className="job-list-container__showcase">
         {currentJob && <JobDetails job={currentJob} />}
       </section>
     </div>

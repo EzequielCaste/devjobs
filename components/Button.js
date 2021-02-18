@@ -1,12 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export const Button = ({innerText}) => {  
-
-  return (
-    <button       
-      className="searchBtn"  
-    >
-       {innerText}
-    </button>
-  )
-}
+export const Button = ({ innerText }) => {
+  return <button className="search-btn">{innerText}</button>;
+};

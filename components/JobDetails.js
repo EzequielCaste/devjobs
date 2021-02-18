@@ -12,12 +12,16 @@ export const JobDetails = ({ job }) => {
   } = job[0];
 
   return (
-    <div className={styles.JobDetails}>
+    <div className={styles['job-details']}>
       <h2>{title}</h2>
-      <p className={styles.subtitle}>
+      <p className={styles['job-details__subtitle']}>
         {type} / {location}
       </p>
-      <div className={styles.howToApply}>
+      <div
+        className={
+          (styles['job-details__how-to-apply'], styles['information-box'])
+        }
+      >
         <h5>How to apply</h5>
         <p dangerouslySetInnerHTML={{ __html: how_to_apply }}></p>
       </div>

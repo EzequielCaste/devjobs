@@ -1,16 +1,12 @@
 @import '../globals.scss';
 
-.JobDetails {
-  .subtitle {
+.job-details {
+  .job-details__subtitle {
     margin-top: -16px;
     color: lighten($text-color, 30);
     font-size: 14px;
   }
-  .howToApply {
-    font-size: 12px;
-    background-color: lighten($primary, 30);
-    border-radius: 6px;
-    border: 3px solid lighten($primary, 20);
+  .how_to_apply {
     h5 {
       padding-bottom: 0;
       padding-right: 0;
@@ -18,4 +14,10 @@
       padding-left: 16px;
     }
   }
+}
+.information-box {
+  font-size: 12px;
+  background-color: lighten($primary, 30);
+  border-radius: 6px;
+  border: 3px solid lighten($primary, 20);
 }

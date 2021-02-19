@@ -22,7 +22,7 @@ export const JobDetails = ({ job }) => {
           (styles['job-details__how-to-apply'], styles['information-box'])
         }
       >
-        <h5>How to apply</h5>
+        <h5 className={styles['box-title']}>How to apply</h5>
         <p dangerouslySetInnerHTML={{ __html: how_to_apply }}></p>
       </div>
 

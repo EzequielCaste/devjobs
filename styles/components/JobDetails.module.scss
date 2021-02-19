@@ -1,0 +1,21 @@
+@import '../globals.scss';
+
+.job-details {
+  .job-details__subtitle {
+    margin-top: -16px;
+    color: lighten($text-color, 30);
+    font-size: 14px;
+  }
+}
+.information-box {
+  font-size: 12px;
+  background-color: lighten($primary, 30);
+  border-radius: 6px;
+  border: 3px solid lighten($primary, 20);
+}
+.box-title {
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-top: 16px;
+  padding-left: 16px;
+}

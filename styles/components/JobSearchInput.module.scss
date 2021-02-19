@@ -1,4 +1,6 @@
-.JobSearchInput {
+@import '../globals.scss';
+
+.job-search-input {
   label {
     display: block;
     margin-bottom: 8px;
@@ -9,7 +11,7 @@
     border-radius: 6px;
   }
 }
-.SearchBtn {
+.job-search-input__search-btn {
   margin: 0 16px;
   padding: 10px 18px;
   border-radius: 6px;

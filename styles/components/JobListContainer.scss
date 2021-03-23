@@ -1,10 +1,10 @@
 .job-list-container {
-  width: 95vw;
-  height: 700px;
+  width: 98%;
   border: 1px solid $primary;
-  padding: 26px;
+  padding: 16px;
+  height: 80vh;
   border-radius: 6px;
-  margin: 16px 0;
+  margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   ul {

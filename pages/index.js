@@ -45,9 +45,7 @@ export default function Home({jobs}) {
 export async function getServerSideProps() {
   // http://remoteok.io/api?tags=react
   // http://jobs.github.com/positions.json?description=junior&page=1
-  const res = await fetch(
-    'http://jobs.github.com/positions.json?description=react&page=1'
-  );
+  const res = await fetch('https://remotive.io/api/remote-jobs?limit=5');
   const jobs = await res.json();
 
   return {

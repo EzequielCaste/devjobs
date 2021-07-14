@@ -1,10 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default async (req, res) => {
-  const url =
-    req.query.site === 'github'
-      ? `https://jobs.github.com/positions.json?description=${req.query.tag}&page=1`
-      : `http://remoteok.io/api?tags=${req.query.tag}`;
+  const url = `https://remotive.io/api/remote-jobs?search=${req.query.tag}`;
 
   return fetch(url, {
     headers: {

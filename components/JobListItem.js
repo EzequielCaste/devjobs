@@ -1,9 +1,9 @@
 import React from 'react';
 
 export const JobListItem = ({job}) => {
-  const {title, company_name, company_logo_url, description, type} = job;
+  const {title, company_name, company_logo_url = 'https://via.placeholder.com/36', description, type} = job;
   return (
-    <li>
+    <li>      
       <img src={company_logo_url} alt={`Logo for ${company_name} `} />
       <div>
         <span className="job-title">{title}</span>

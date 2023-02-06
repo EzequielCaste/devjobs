@@ -32,11 +32,11 @@ export default function Home({jobs}) {
 
       <main>
         <JobSearchInput handleChange={changeApi} handleClick={searchForJobs} />
-        {/* {state === 'loading' ? (
+        {state === 'loading' ? (
           'Loading...'
         ) : (
           <JobListContainer jobs={jobsList} />
-        )} */}
+        )}
       </main>
     </div>
   );

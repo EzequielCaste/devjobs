@@ -16,7 +16,7 @@ export default function Home({jobs}) {
     setState('loading');
 
     const res = await fetch(`api/search?site=${site}&tag=${tag}`);
-    const jobs = await res.json();
+    const {jobs} = await res.json();
 
     setJobsList(jobs);
     setState('idle');
@@ -33,7 +33,9 @@ export default function Home({jobs}) {
       <main>
         <JobSearchInput handleChange={changeApi} handleClick={searchForJobs} />
         {state === 'loading' ? (
-          'Loading...'
+          <p className="home-status">
+          Loading...
+          </p>
         ) : (
           <JobListContainer jobs={jobsList} />
         )}
@@ -45,8 +47,8 @@ export default function Home({jobs}) {
 export async function getServerSideProps() {
   // http://remoteok.io/api?tags=react
   // http://jobs.github.com/positions.json?description=junior&page=1
-  const res = await fetch('https://remotive.io/api/remote-jobs?limit=5');
-  const jobs = await res.json();
+  const res = await fetch('https://remotive.com/api/remote-jobs?limit=5');
+  const { jobs } = await res.json();
 
   return {
     props: {

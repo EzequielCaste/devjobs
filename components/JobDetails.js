@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/components/JobDetails.module.scss';
 
-export const JobDetails = ({job}) => {
+export const JobDetails = ({ job }) => {
   const {title, description, job_type, candidate_required_location, url} =
     job[0];
 
@@ -11,7 +11,7 @@ export const JobDetails = ({job}) => {
       <p className={styles['job-details__subtitle']}>
         {job_type} / {candidate_required_location}
       </p>
-      <div dangerouslySetInnerHTML={{__html: description}}></div>
+      <div className={styles['job-details__description']} dangerouslySetInnerHTML={{__html: description}}></div>
       <div
         className={
           (styles['job-details__how-to-apply'], styles['information-box'])

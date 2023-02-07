@@ -2,7 +2,7 @@
 
 .job-details {
   .job-details__subtitle {
-    margin-top: -16px;
+
     color: lighten($text-color, 30);
     font-size: 14px;
   }
@@ -16,4 +16,12 @@
 }
 .box-title {
   padding: 1em 0;
+}
+@media all and (min-width: 500px) {
+  .information-box {
+    font-size: 1rem;
+  }
+  .job-details__description {
+    padding: 1rem;
+  }
 }

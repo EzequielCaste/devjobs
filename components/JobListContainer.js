@@ -1,16 +1,25 @@
-import React, {useState} from 'react';
-import {JobDetails} from './JobDetails';
-import {JobListItem} from './JobListItem';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
+import useWindowSize from '../hooks/useWindowSize';
+import JobDetailPortal from './JobDetailPortal';
+import { JobListItem } from './JobListItem';
+import { JobDetails } from './JobDetails';
 
-export const JobListContainer = ({jobs}) => {
-  const jobList = jobs.jobs;
-
+export const JobListContainer = ({ jobs }) => {
   const [currentJob, setCurrentJob] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const {width} = useWindowSize()
+
+  console.log(jobs)
+ 
+  const isMobile = width < 500
 
   const handleClick = (id) => {
-    setCurrentJob(jobList.filter((job) => job.id === id));
+    setShowModal(true)
+    setCurrentJob(jobs.filter((job) => job.id === id));
   };
-  const jobListComponents = jobList.map((job) => (
+
+  const jobListComponents = jobs?.map((job) => (
     <div key={job.id} onClick={() => handleClick(job.id)}>
       <JobListItem job={job} />
     </div>
@@ -20,7 +29,16 @@ export const JobListContainer = ({jobs}) => {
     <div className="job-list-container">
       <ul>{jobListComponents}</ul>
       <section className="job-list-container__showcase">
-        {currentJob && <JobDetails job={currentJob} />}
+        {
+          currentJob && showModal && isMobile &&
+          createPortal(
+            <JobDetailPortal job={currentJob} onClose={() => setShowModal(false)} />,
+            document.body
+          )
+        }
+        {
+          currentJob && !isMobile && <JobDetails job={currentJob} />
+        }
       </section>
     </div>
   );

@@ -5,11 +5,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 16px;
-  height: 12vh;
-  width: 90%;
   label {
     display: block;
     margin-bottom: 8px;
+    font-weight: 500;
   }
   input[type='text'] {
     padding: 8px;
@@ -17,8 +16,14 @@
     border-radius: 6px;
   }
 }
+.job-search-input-container {
+  display: flex;
+  flex-direction: column;
+}
 .job-search-input__search-btn {
-  margin: 0 16px;
+  margin: 22px 0;
+  width: fit-content;
+  align-self: center;
   padding: 10px 18px;
   border-radius: 6px;
   outline: none;
@@ -45,5 +50,25 @@
   }
   input[type='radio'] {
     margin-left: 8px;
+  }
+}
+@media all and (min-width: 500px) {
+  .job-search-input-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .job-search-input {
+    label {
+      margin: 0;
+    }
+  }
+  .job-search-input__search-btn {
+    margin: 0;
+  }
+}
+@media all and (min-width: 1450px) {
+  .job-search-input {
+    justify-content: center;
   }
 }

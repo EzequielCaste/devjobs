@@ -8,8 +8,10 @@ const JobDetailPortal = ({ job, onClose }) => {
 
   return (
     <div className={`modal ${styles['job-details']}`}>
-      <div onClick={onClose} className={styles['close-btn']}>✖</div>
-      <h2>{title}</h2>
+      <div className={styles['job-details__header']}>
+        <h2>{title}</h2>
+        <div onClick={onClose} className={styles['close-btn']}>✖</div>
+      </div>
       <p className={styles['job-details__subtitle']}>
         {job_type} / {candidate_required_location}
       </p>

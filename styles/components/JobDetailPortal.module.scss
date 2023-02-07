@@ -1,16 +1,23 @@
 @import '../globals.scss';
 
+.job-details__header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
 .job-details {
   .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
+    /* padding: 1rem; */
   }
   padding: 0.5rem;
   flex-direction: column;
-  h2 {
+  /* h2 {
     margin-top: 1rem;
-  }
+  } */
   .job-details__subtitle {
     color: lighten($text-color, 30);
     font-size: 14px;

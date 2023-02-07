@@ -9,8 +9,6 @@ export const JobListContainer = ({ jobs }) => {
   const [currentJob, setCurrentJob] = useState('');
   const [showModal, setShowModal] = useState(false);
   const {width} = useWindowSize()
-
-  console.log(jobs)
  
   const isMobile = width < 500
 

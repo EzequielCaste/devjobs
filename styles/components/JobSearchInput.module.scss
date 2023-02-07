@@ -3,7 +3,7 @@
 .job-search-input {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 24px 16px;
   label {
     display: block;
@@ -58,7 +58,8 @@
     align-items: center;
     gap: 1rem;
   }
-  .job-search-input {
+  .job-search-input {    
+  justify-content: space-between;
     label {
       margin: 0;
     }

@@ -8,7 +8,7 @@ export const JobSearchInput = ({ handleClick, handleChange }) => {
   return (
     <div className={styles['job-search-input']}>
       <div className={styles['job-search-input-container']}>
-        <label htmlFor="job-search">Job Description</label>
+        <label htmlFor="job-search">Search</label>
         <input
           type="text"
           placeholder="Search by tags, title, expertise, companies"

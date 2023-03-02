@@ -1,5 +1,13 @@
 ## DevJobs
 
+Job listing board where the user can search and fetch jobs from the GitHub Jobs API.
+
+Tecnologies used:
+- Next.JS
+- SASS
+- CSS Modules
+- Node-fetch
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
